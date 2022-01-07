@@ -5,7 +5,7 @@
 
 /* Header top */
 .header-top-wrapper {
-  background-image: url('/image/BG.png');
+  background-image: url('/DrupalApp.vn/image/BG.png');
   height: 100%;
   /* background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -14,7 +14,7 @@
 }
 
 .header-top-wrapper::after {
-  background-image: url('/image/shap.png');
+  background-image: url('/DrupalApp.vn/image/shap.png');
   height: 700px;
   background-size: cover;
 }
@@ -122,7 +122,7 @@ ul.menu.nav.navbar-nav li a:hover {
 .introduce-wrapper .content-right .content-right-detail p::before {
   display: flex;
   flex-direction: column;
-  content: url('/image/group126.png');
+  content: url('/DrupalApp.vn/image/group126.png');
 }
 
 /* feature */
@@ -297,7 +297,7 @@ ul.menu.nav.navbar-nav li a:hover {
 
 /* product */
 .product-wrapper {
-  background-image: url('/image/wave.png');
+  background-image: url('/DrupalApp.vn/image/wave.png');
   height: 100%;
   background-size: cover;
 }
