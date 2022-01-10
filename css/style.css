@@ -54,7 +54,7 @@ ul.menu.nav.navbar-nav li a:hover {
 }
 
 .about-us-wrapper .row {
-  padding-bottom: 100px;
+  padding-bottom: 215px;
 }
 
 .about-us-wrapper .text-wrapper {
@@ -297,13 +297,16 @@ ul.menu.nav.navbar-nav li a:hover {
 
 /* product */
 .product-wrapper {
-  background-image: url('/drupalApp.vn/image/wave.png');
+  margin-top: 100px;
+  position: relative;
+  background-image: url(/drupalApp.vn/image/wave.svg);
   height: 100%;
   background-size: cover;
+  background-position-y: 11%;
+  padding-top: 300px;
 }
 
 .product-wrapper .product-title-wrapper {
-  padding: 400px 0 0 0;
   text-align: center;
 }
 
@@ -318,7 +321,7 @@ ul.menu.nav.navbar-nav li a:hover {
 }
 
 .screenshot-frame img {
-  height: 592px;
+  height: 590px;
 }
 
 .screenshot-frame {
@@ -326,7 +329,7 @@ ul.menu.nav.navbar-nav li a:hover {
   z-index: 99;
   left: 50%;
   transform: translateX(-50%);
-  top: 85px;
+  top: 87px;
 }
 
 .product-slider-wrapper .owl-item img {
@@ -358,4 +361,56 @@ ul.menu.nav.navbar-nav li a:hover {
 .product-slider-wrapper .owl-item.active.center .item {
   display: flex;
   justify-content: center;
+}
+
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav {
+  margin: 50px 0;
+}
+
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav button.owl-prev {
+  font-size: 0;
+}
+
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav button.owl-next {
+  font-size: 0;
+}
+
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav button.owl-prev::before {
+  content: '\f060';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav button.owl-next::before {
+  content: '\f061';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav button.owl-next:hover,
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav button.owl-prev:hover {
+  color: #fff;
+}
+
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav button {
+  background-color: #F0F2F6;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #415ED4;
+}
+
+.product-wrapper .product-slider-wrapper .owl-carousel .owl-nav button:hover {
+  background-color: #415ED4;
+}
+
+.product-wrapper .product-name h2 {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: Source Sans Pro;
+  font-size: 36px;
+  font-weight: bold;
 }
