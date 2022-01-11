@@ -31,6 +31,7 @@ ul.menu.nav.navbar-nav li {
 
 ul.menu.nav.navbar-nav li a {
   color: #fff;
+  line-height: 2;
 }
 
 ul.menu.nav.navbar-nav li img {
@@ -42,6 +43,26 @@ ul.menu.nav.navbar-nav li img {
   text-decoration: none;
   background-color: unset;
   ;
+}
+
+ul.menu.nav.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+ul.menu.nav.navbar-nav li a:after {
+  width: 0;
+  background: #FFB913;
+  height: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  transition: 400ms ease-in-out;
+  margin: 0 auto;
+}
+
+ul.menu.nav.navbar-nav li a:hover:after {
+  width: 90%;
 }
 
 ul.menu.nav.navbar-nav li a:hover {
@@ -297,13 +318,22 @@ ul.menu.nav.navbar-nav li a:hover {
 
 /* product */
 .product-wrapper {
-  margin-top: 100px;
   position: relative;
-  background-image: url(/drupalApp.vn/image/wave.svg);
-  height: 100%;
   background-size: cover;
   background-position-y: 11%;
-  padding-top: 300px;
+  padding-top: 13%;
+}
+
+.product-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("/drupalApp.vn/image/wave.png") no-repeat;
+  background-size: cover;
+  top: -5%;
+  position: absolute;
+  display: inline-block;
+  z-index: -1;
 }
 
 .product-wrapper .product-title-wrapper {
@@ -413,4 +443,223 @@ ul.menu.nav.navbar-nav li a:hover {
   font-family: Source Sans Pro;
   font-size: 36px;
   font-weight: bold;
+}
+
+/* Tải sản phẩm */
+.product-test-wrapper .product-test-title {
+  text-align: center;
+}
+
+.product-test-wrapper .product-test-title h1:nth-child(2),
+.product-test-wrapper .product-test-title h1:nth-child(3),
+.product-test-wrapper .product-test-title h1:nth-child(4) {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: inherit;
+}
+
+.product-test-wrapper .product-test-title h1:nth-child(4) {
+  font-size: 20px;
+}
+
+.product-test-wrapper .product-test-title h1:nth-child(3) {
+  font-size: 38px;
+}
+
+.product-test-wrapper .product-test-title p {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.product-test-wrapper .product-test-content {
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+.product-test-wrapper .product-test-content::after {
+  content: url('/drupalApp.vn/image/wave3.png');
+  position: absolute;
+  top: -45%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.product-test-wrapper .product-test-content p {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+/* Contact */
+.contact-wrapper {
+  padding: 100px 0;
+}
+
+.contact-wrapper .contact-title {
+  text-align: center;
+}
+
+.contact-wrapper .contact-title h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-wrapper .contact-title p {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.contact-wrapper .contact-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.contact-wrapper .contact-content .contact {
+  text-align: -webkit-center;
+  margin-top: 40px;
+}
+
+.contact-wrapper .contact-content .contact .contact-image {
+  position: relative;
+  background: #F9D95A;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.contact-wrapper .contact-content .contact .contact-image img {
+  position: absolute;
+  top: 25%;
+  left: 23%;
+}
+
+.contact-wrapper .contact-content .contact .contact-image {
+  margin-bottom: 20px;
+}
+
+.contact-wrapper .contact-content .contact .contact-detail p {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.contact-wrapper .contact-content .contact .contact-detail p:nth-child(1) {
+  font-weight: bold;
+}
+
+/* Map */
+.map-wrapper {
+  position: relative;
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 250px;
+}
+
+.map-wrapper .map-form-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 64%;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+}
+
+.map-wrapper .map-form input {
+  height: 40px;
+  margin: 10px 0;
+  border: 1px solid rgba(122, 122, 122, 0.303612);
+  border-radius: 4px;
+  padding: 5px;
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.map-wrapper .map-form textarea {
+  margin: 10px 0;
+  border: 1px solid rgba(122, 122, 122, 0.303612);
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.map-wrapper .map-form-wrapper {
+  background: #FFFFFF;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.0966938);
+  border-radius: 30px;
+  padding: 40px;
+  padding-bottom: 50px;
+}
+
+.map-wrapper .map-form-wrapper .form-group {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.map-wrapper .map-form-wrapper .form-row .form-group:first-child {
+  padding-right: 20px;
+}
+
+.map-wrapper .map-form-wrapper button.btn.btn-primary {
+  position: absolute;
+  width: 10%;
+  background-color: #FFB913;
+  border-color: #FFB913;
+  background-image: unset;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* partner */
+.partner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.partner-wrapper .partner-image {
+  mix-blend-mode: luminosity;
+  transition: .3s;
+
+}
+
+.partner-wrapper .partner-image:hover {
+  mix-blend-mode: inherit;
+  transform: scale(1.1);
+}
+
+/* footer */
+.footer-wrapper {
+  padding: 30px 0;
+  color: #fff;
+  background-color: #2C2C2C;
+}
+
+.footer-wrapper .logo-footer {
+  float: left;
+}
+
+.footer-wrapper .copyright-footer {
+  float: right;
+}
+
+.footer-wrapper .footer-detail p {
+  margin: 0;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  padding-top: 10px;
 }
