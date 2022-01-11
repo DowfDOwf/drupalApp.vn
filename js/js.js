@@ -23,6 +23,7 @@ $(document).ready(function () {
     margin: 10,
     nav: true,
     center: true,
+    mouseDrag: false,
     responsive: {
       0: {
         items: 1
