@@ -3,6 +3,10 @@
   font-family: 'Comfortaa';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Header top */
 .header-top-wrapper {
   background-image: url('/drupalApp.vn/image/BG.png');
@@ -11,6 +15,12 @@
   -o-background-size: 100% 100%;
   -webkit-background-size: 100% 100%; */
   background-size: cover;
+  position: relative;
+}
+
+.header-top-wrapper .menu-top.container .row {
+  display: flex;
+  align-items: center;
 }
 
 .header-top-wrapper::after {
@@ -69,6 +79,39 @@ ul.menu.nav.navbar-nav li a:hover {
   color: #FFB913;
 }
 
+.menu-scroll {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 400ms ease-in-out;
+  top: 0;
+}
+
+.menu-scroll .row {
+  display: flex;
+  align-items: center;
+}
+
+.menu-scroll::after {
+  content: '';
+  display: block;
+  width: 100vw;
+  background: linear-gradient(215.45deg, #1E1D1C 5.99%, #272315 94.01%);
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.menu-scroll.active {
+  opacity: 1;
+  z-index: 99;
+}
+
 /* about us */
 .about-us-wrapper {
   margin-top: 200px;
@@ -90,6 +133,11 @@ ul.menu.nav.navbar-nav li a:hover {
 .about-us-wrapper .text-wrapper p.intro-text {
   color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
+}
+
+#owl-one .owl-carousel .owl-item img {
+  width: auto;
+  height: 700px;
 }
 
 /* introduce */
@@ -198,7 +246,7 @@ ul.menu.nav.navbar-nav li a:hover {
 }
 
 .feature-content-left .feature-left-item .feature-left-image {
-  z-index: 99;
+  z-index: 2;
   width: 80px;
   height: 80px;
   padding: 10px;
@@ -217,7 +265,7 @@ ul.menu.nav.navbar-nav li a:hover {
 }
 
 .feature-content-right .feature-right-item .feature-right-image {
-  z-index: 99;
+  z-index: 2;
   width: 80px;
   height: 80px;
   padding: 10px;
@@ -356,7 +404,7 @@ ul.menu.nav.navbar-nav li a:hover {
 
 .screenshot-frame {
   position: absolute;
-  z-index: 99;
+  z-index: 2;
   left: 50%;
   transform: translateX(-50%);
   top: 87px;
@@ -497,7 +545,7 @@ ul.menu.nav.navbar-nav li a:hover {
 
 /* Contact */
 .contact-wrapper {
-  padding: 100px 0;
+  padding: 30px 0;
 }
 
 .contact-wrapper .contact-title {
