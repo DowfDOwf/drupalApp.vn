@@ -18,9 +18,21 @@ html {
   position: relative;
 }
 
-.header-top-wrapper .menu-top.container .row {
+.header-top-wrapper .menu-top {
   display: flex;
   align-items: center;
+}
+
+.header-top-wrapper .logo-wrapper {
+  flex: 1;
+}
+
+.header-row {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 98;
+  background: linear-gradient(215.45deg, #1E1D1C 5.99%, #272315 94.01%);
 }
 
 .header-top-wrapper::after {
@@ -29,8 +41,8 @@ html {
   background-size: cover;
 }
 
-.menu-top.container {
-  padding-top: 20px;
+.menu-top {
+  padding: 5px 0;
 }
 
 ul.menu.nav.navbar-nav li {
@@ -79,43 +91,9 @@ ul.menu.nav.navbar-nav li a:hover {
   color: #FFB913;
 }
 
-.menu-scroll {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: 400ms ease-in-out;
-  top: -10%;
-}
-
-.menu-scroll .row {
-  display: flex;
-  align-items: center;
-}
-
-.menu-scroll::after {
-  content: '';
-  display: block;
-  width: 100vw;
-  background: linear-gradient(215.45deg, #1E1D1C 5.99%, #272315 94.01%);
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.menu-scroll.active {
-  opacity: 1;
-  z-index: 99;
-  top: 0;
-}
-
 /* about us */
 .about-us-wrapper {
-  margin-top: 200px;
+  padding-top: 200px;
 }
 
 .about-us-wrapper .row {
@@ -529,7 +507,7 @@ ul.menu.nav.navbar-nav li a:hover {
 }
 
 .product-test-wrapper .product-test-content::after {
-  content: url('/drupalApp.vn/image/wave3.png');
+  content: url('/drupalApp.vn/image/wave3.svg');
   position: absolute;
   top: -45%;
   left: 50%;
@@ -672,10 +650,10 @@ ul.menu.nav.navbar-nav li a:hover {
 }
 
 /* partner */
-.partner-wrapper {
+.partner-wrapper .container {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
+  padding: 20px 0;
 }
 
 .partner-wrapper .partner-image {

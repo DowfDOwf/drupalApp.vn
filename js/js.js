@@ -15,8 +15,8 @@ $(document).ready(function () {
       }
     }
   })
-   // slider 2
-   $('#owl-two').owlCarousel({
+  // slider 2
+  $('#owl-two').owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
@@ -29,8 +29,32 @@ $(document).ready(function () {
       600: {
         items: 1
       },
-      1000: {
+      1024: {
+        items: 3
+      },
+      1440: {
         items: 5
+      }
+    }
+  })
+  $('#owl-third').owlCarousel({
+    loop: false,
+    margin: 10,
+    nav: false,
+    center: false,
+    mouseDrag: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 4
+      },
+      1024: {
+        items: 4
+      },
+      1440: {
+        items: 4
       }
     }
   })
@@ -64,14 +88,7 @@ $(document).ready(function () {
       scrollTop: $(".contact-wrapper").offset().top
     }, 1000);
   })
-  // Menu scroll
-  $(window).scroll(function() {
-    var $height = $(window).scrollTop();
-    if($height > 50) {
-      $('.menu-scroll').addClass('active');
-    }
-  else{
-    $('.menu-scroll').removeClass('active');
-  }
-  });
+  $('.btn-menu').click(function () {
+    $('.main-menu-wrapper').toggleClass('active');
+  })
 })
