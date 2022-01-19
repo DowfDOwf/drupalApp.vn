@@ -88,7 +88,11 @@ $(document).ready(function () {
       scrollTop: $(".contact-wrapper").offset().top
     }, 1000);
   })
+  // Menu responsive
   $('.btn-menu').click(function () {
     $('.main-menu-wrapper').toggleClass('active');
+  })
+  $('.btn-menu').mouseleave(function () {
+    $('.main-menu-wrapper').removeClass('active');
   })
 })
