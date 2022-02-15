@@ -89,10 +89,13 @@ $(document).ready(function () {
     }, 1000);
   })
   // Menu responsive
-  $('.btn-menu').click(function () {
-    $('.main-menu-wrapper').toggleClass('active');
-  })
+  // $('.btn-menu').click(function () {
+  //   $('.main-menu-wrapper').toggleClass('active');
+  // })
   $('.btn-menu').mouseleave(function () {
     $('.main-menu-wrapper').removeClass('active');
   })
 })
+function custom_toggle_menu() {
+  $('.main-menu-wrapper').toggleClass('active');
+}
